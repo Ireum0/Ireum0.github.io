@@ -69,6 +69,10 @@ input, textarea, select {
   border-radius: 3px;
 }
 
+textarea {
+  height: 150px;
+}
+
 input[type="file"] {
   border: none;
   padding: 0;
