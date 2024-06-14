@@ -91,36 +91,3 @@ button {
 button:hover {
   background-color: #555;
 }
-
-/* 질문 목록 스타일 */
-.question-list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.question-item {
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  padding: 10px;
-  margin-bottom: 10px;
-}
-
-.question-title {
-  font-weight: bold;
-}
-
-.question-content {
-  margin-top: 5px;
-}
-
-.question-actions {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 10px;
-}
-
-.question-actions button {
-  margin-left: 10px;
-}
-
