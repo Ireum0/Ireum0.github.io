@@ -3,38 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>질문 목록 - 카테고리별</title>
+    <title>질의응답 사이트</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header>
-        <h1>질문 목록 - 카테고리별</h1>
+        <h1>질의응답 사이트</h1>
     </header>
 
     <nav>
         <ul>
             <li><a href="index.html">홈</a></li>
             <li><a href="ask.html">질문하기</a></li>
-            <li><a href="Answer_index.html">답변하기</a></li>
+            <li><a href="answer.html">답변하기</a></li>
             <li><a href="#">로그인</a></li>
         </ul>
     </nav>
 
     <main>
-        <div class="container">
-            <h2>카테고리별 질문 목록</h2>
-            <div class="category-tabs">
-                <button class="category-btn active" data-category="all">전체</button>
-                <button class="category-btn" data-category="category1">카테고리 1</button>
-                <button class="category-btn" data-category="category2">카테고리 2</button>
-                <button class="category-btn" data-category="category3">카테고리 3</button>
-            </div>
-            <div class="question-list">
-                <!-- 질문 목록이 여기에 동적으로 추가됩니다 -->
-            </div>
+        <div class="question">
+            <h2>질문 제목</h2>
+            <p>질문 내용...</p>
         </div>
+
+        <div class="question">
+            <h2>질문 제목</h2>
+            <p>질문 내용...</p>
+        </div>
+
+        <!-- 추가적인 질문들을 이어서 추가 -->
     </main>
 
-    <script src="answer_index.js"></script>
+    <footer>
+        <p>&copy; 2024 질의응답 사이트</p>
+    </footer>
 </body>
 </html>
