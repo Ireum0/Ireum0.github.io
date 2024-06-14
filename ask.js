@@ -16,10 +16,28 @@ questionForm.addEventListener('submit', (event) => {
         // 질문 등록 성공 시 처리
         console.log(data);
         questionForm.reset();
-        updateQuestionList();
+        showSuccessMessage();
     })
     .catch(error => {
         // 질문 등록 실패 시 처리
         console.error(error);
+        showErrorMessage();
     });
 });
+
+// 성공/실패 메시지 표시
+function showSuccessMessage() {
+    const successMessage = document.getElementById('successMessage');
+    successMessage.style.display = 'block';
+    setTimeout(() => {
+        successMessage.style.display = 'none';
+    }, 3000);
+}
+
+function showErrorMessage() {
+    const errorMessage = document.getElementById('errorMessage');
+    errorMessage.style.display = 'block';
+    setTimeout(() => {
+        errorMessage.style.display = 'none';
+    }, 3000);
+}
