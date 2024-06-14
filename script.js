@@ -7,10 +7,35 @@ function updateQuestionList() {
         // 질문 목록 업데이트
         const questionList = document.querySelector('.question-list');
         questionList.innerHTML = '';
+
+        // 카테고리별로 질문 목록 표시
+        const categoryMap = new Map();
         data.forEach(question => {
-            const questionElement = document.createElement('div');
-            questionElement.textContent = question.title;
-            questionList.appendChild(questionElement);
+            if (!categoryMap.has(question.category)) {
+                categoryMap.set(question.category, []);
+            }
+            categoryMap.get(question.category).push(question);
+        });
+
+        categoryMap.forEach((questions, category) => {
+            const categoryElement = document.createElement('div');
+            categoryElement.classList.add('category');
+
+            const categoryTitle = document.createElement('h2');
+            categoryTitle.textContent = category;
+            categoryElement.appendChild(categoryTitle);
+
+            const questionElements = document.createElement('div');
+            questionElements.classList.add('question-elements');
+            questions.forEach(question => {
+                const questionElement = document.createElement('div');
+                questionElement.classList.add('question-element');
+                questionElement.textContent = question.title;
+                questionElements.appendChild(questionElement);
+            });
+            categoryElement.appendChild(questionElements);
+
+            questionList.appendChild(categoryElement);
         });
     })
     .catch(error => {
