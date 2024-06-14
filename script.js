@@ -28,8 +28,9 @@ function updateQuestionList() {
             const questionElements = document.createElement('div');
             questionElements.classList.add('question-elements');
             questions.forEach(question => {
-                const questionElement = document.createElement('div');
+                const questionElement = document.createElement('a');
                 questionElement.classList.add('question-element');
+                questionElement.href = `/question/${question.id}`;
                 questionElement.textContent = question.title;
                 questionElements.appendChild(questionElement);
             });
