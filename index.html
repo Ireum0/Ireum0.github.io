@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>질의응답 사이트</title>
+    <title>질문 목록 - 카테고리별</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
     <header>
-        <h1>질의응답 사이트</h1>
+        <h1>질문 목록 - 카테고리별</h1>
     </header>
 
     <nav>
@@ -22,17 +22,19 @@
 
     <main>
         <div class="container">
-            <h2>질문 목록</h2>
-            <ul class="question-list" id="questionList">
-                <!-- 질문 목록이 JavaScript에서 동적으로 생성됩니다. -->
-            </ul>
+            <h2>카테고리별 질문 목록</h2>
+            <div class="category-tabs">
+                <button class="category-btn active" data-category="all">전체</button>
+                <button class="category-btn" data-category="category1">카테고리 1</button>
+                <button class="category-btn" data-category="category2">카테고리 2</button>
+                <button class="category-btn" data-category="category3">카테고리 3</button>
+            </div>
+            <div class="question-list">
+                <!-- 질문 목록이 여기에 동적으로 추가됩니다 -->
+            </div>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2024 질의응답 사이트</p>
-    </footer>
-
-    <script src="script.js"></script>
+    <script src="answer_index.js"></script>
 </body>
 </html>
