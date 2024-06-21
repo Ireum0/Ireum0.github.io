@@ -67,6 +67,9 @@ section#latest-questions ul {
 section#latest-questions ul li {
     border-bottom: 1px solid #ddd;
     padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 section#latest-questions ul li:last-child {
@@ -76,10 +79,26 @@ section#latest-questions ul li:last-child {
 section#latest-questions ul li a {
     color: #333;
     font-weight: bold;
+    flex-grow: 1;
 }
 
 section#latest-questions ul li p {
     color: #666;
+    margin-right: 20px;
+}
+
+.delete-btn {
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
 }
 
 footer {
