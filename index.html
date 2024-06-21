@@ -3,49 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>질의응답 사이트</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>구미고 지식인 - 홈</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>질의응답 사이트</h1>
+        <div class="container">
+            <h1>구미고 지식인</h1>
+        </div>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="index.html">홈</a></li>
-            <li><a href="ask.html">질문하기</a></li>
-            <li><a href="answer.html">답변하기</a></li>
-            <li><a href="#">로그인</a></li>
-        </ul>
+        <div class="container"> 
+            <ul>
+                <li><a href="index.html">홈</a></li>
+                <li><a href="ask.html">질문하기</a></li>
+                <li><a href="about.html">홈페이지 소개</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <main>
-        <div class="category">
-            <h2>카테고리 1</h2>
-            <div class="question-elements">
-                <a href="question.html?id=1" class="question-element">질문 제목 1</a>
-                <a href="question.html?id=2" class="question-element">질문 제목 2</a>
-                <!-- 추가적인 질문 링크 -->
-            </div>
+    <section id="latest-questions">
+        <div class="container">
+            <h2>최신 질문</h2>
+            <ul>
+                <li>
+                    <a href="#" onclick="window.location.href='ask.html'">질문 제목 1</a>
+                    <p>질문 내용이 여기에 들어갑니다.</p>
+                </li>
+                <li>
+                    <a href="#">질문 제목 2</a>
+                    <p>질문 내용이 여기에 들어갑니다.</p>
+                </li>
+                <li>
+                    <a href="#">질문 제목 3</a>
+                    <p>질문 내용이 여기에 들어갑니다.</p>
+                </li>
+            </ul>
         </div>
-
-        <div class="category">
-            <h2>카테고리 2</h2>
-            <div class="question-elements">
-                <a href="question.html?id=3" class="question-element">질문 제목 3</a>
-                <a href="question.html?id=4" class="question-element">질문 제목 4</a>
-                <!-- 추가적인 질문 링크 -->
-            </div>
-        </div>
-
-        <!-- 추가적인 카테고리와 질문 링크를 이어서 추가 -->
-    </main>
+    </section>
 
     <footer>
-        <p>&copy; 2024 질의응답 사이트</p>
+        <div class="container">
+            <p>&copy; 2024 구미고 지식인</p>
+        </div>
     </footer>
-
-    <script src="script.js"></script>
+    <script>
+        // 로컬 스토리지에서 질문 데이터 가져오기
+        var questions = JSON.parse(localStorage.getItem('questions')) || [];
+    
+        // 최신 질문 섹션에 질문들을 추가
+var latestQuestionsSection = document.getElementById('latest-questions');
+questions.forEach(function(question) {
+    var li = document.createElement('li');
+    var a = document.createElement('a');
+    a.textContent = question.title;
+    a.href = '#';
+    li.appendChild(a);
+    var p = document.createElement('p');
+    p.textContent = question.content;
+    li.appendChild(p);
+    // 기존 질문들 앞에 추가
+    var existingQuestions = latestQuestionsSection.querySelector('ul').children;
+    if (existingQuestions.length > 0) {
+        latestQuestionsSection.querySelector('ul').insertBefore(li, existingQuestions[0]);
+    } else {
+        latestQuestionsSection.querySelector('ul').appendChild(li);
+    }
+});
+    </script>
 </body>
 </html>

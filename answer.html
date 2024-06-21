@@ -3,48 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>질의응답 사이트</title>
-    <link href="answer.css" rel="stylesheet" type="text/css" />
+    <title>답변하기 - 구미고 지식인</title>
+    <link rel="stylesheet" href="answer-styles.css">
 </head>
 <body>
     <header>
-        <h1>질의응답 사이트</h1>
+        <div class="container">
+            <h1>답변하기</h1>
+        </div>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="index.html">홈</a></li>
-            <li><a href="ask.html">질문하기</a></li>
-            <li><a href="answer.html">답변하기</a></li>
-            <li><a href="#">로그인</a></li>
-        </ul>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">홈</a></li>
+                <li><a href="ask.html">질문하기</a></li>
+                <li><a href="about.html">홈페이지 소개</a></li>
+            </ul>
+        </div>
     </nav>
 
-    <main>
-        <div class="question" onclick="showAnswerBox(this)">
-            <h2>질문 제목</h2>
-            <p>질문 내용...</p>
-            <div class="answer-box">
-                <textarea placeholder="답변을 입력하세요..."></textarea>
-                <button onclick="submitAnswer(this)">답변 제출</button>
-            </div>
+    <section id="answer-form">
+        <div class="container">
+            <h2>질문 제목이 여기에 표시됩니다</h2>
+            <p>질문 내용이 여기에 표시됩니다</p>
+            <h3>답변 작성하기</h3>
+            <form id="answer-form">
+                <label for="answer-content">답변 내용:</label><br>
+                <textarea id="answer-content" name="answer-content" rows="4" required></textarea><br><br>
+                <button type="submit">답변 등록하기</button>
+            </form>
         </div>
-
-        <div class="question" onclick="showAnswerBox(this)">
-            <h2>질문 제목</h2>
-            <p>질문 내용...</p>
-            <div class="answer-box">
-                <textarea placeholder="답변을 입력하세요..."></textarea>
-                <button onclick="submitAnswer(this)">답변 제출</button>
-            </div>
-        </div>
-
-        <!-- 추가적인 질문들을 이어서 추가 -->
-    </main>
+    </section>
 
     <footer>
-        <p>&copy; 2024 질의응답 사이트</p>
+        <div class="container">
+            <p>&copy; 2024 구미고 지식인</p>
+        </div>
     </footer>
-    <script src="answer.js"></script>
 </body>
 </html>

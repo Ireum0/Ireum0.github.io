@@ -1,0 +1,90 @@
+/* styles.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+nav {
+    background-color: #495057;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    color: #17a2b8;
+}
+
+section#latest-questions {
+    background-color: #fff;
+    padding: 20px 0;
+}
+
+section#latest-questions h2 {
+    color: #333;
+    text-align: center;
+}
+
+section#latest-questions ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+section#latest-questions ul li {
+    border-bottom: 1px solid #ddd;
+    padding: 20px 0;
+}
+
+section#latest-questions ul li:last-child {
+    border-bottom: none;
+}
+
+section#latest-questions ul li a {
+    color: #333;
+    font-weight: bold;
+}
+
+section#latest-questions ul li p {
+    color: #666;
+}
+
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
