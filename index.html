@@ -26,18 +26,21 @@
     <section id="latest-questions">
         <div class="container">
             <h2>최신 질문</h2>
-            <ul>
+            <ul id="question-list">
                 <li>
                     <a href="#" onclick="window.location.href='ask.html'">질문 제목 1</a>
                     <p>질문 내용이 여기에 들어갑니다.</p>
+                    <button class="delete-btn" onclick="deleteQuestion(0)">삭제</button>
                 </li>
                 <li>
                     <a href="#">질문 제목 2</a>
                     <p>질문 내용이 여기에 들어갑니다.</p>
+                    <button class="delete-btn" onclick="deleteQuestion(1)">삭제</button>
                 </li>
                 <li>
                     <a href="#">질문 제목 3</a>
                     <p>질문 내용이 여기에 들어갑니다.</p>
+                    <button class="delete-btn" onclick="deleteQuestion(2)">삭제</button>
                 </li>
             </ul>
         </div>
